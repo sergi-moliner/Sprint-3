@@ -1,59 +1,30 @@
-# Sprint 3 IT Academy | Video management tool
+# 🎬 Movie Analysis Project
 
-## Introduction
-
-A company in the audiovisual sector has asked us for a web application that will allow their employees to quickly find movies from a large database they have, since the process is currently done manually.
-
-You will be in charge of setting up the core of the application: all the logic of filtering and sorting of movies. You have 2 weeks to finish, which is how long this sprint lasts.
+Welcome to the Movie Analysis project! This project provides a set of helpful functions for analyzing and working with a collection of movie data.
 
 <br>
 
-## Requirements
+## 🚀 Instructions
 
+To set up and run this project locally, follow these steps:
 
-1. Clone this repo
-```bash
-$ git clone https://github.com/IT-Academy-BCN/starter-code-frontend-sprint-3-movies
+1. 📦 Clone the project repository:
+
+```shell
+git clone https://github.com/sergi-moliner/Sprint-3/
 ```
 
-2. Unlink your repo from the itacademy repository
-```bash
-$ git remote rm origin
-```
+🗂️ 2.Navigate to the project directory.
 
-3. Link your repo to the repository you have to create in your github account
-```bash
-$ git remote add origin <your repo name!>
-```
+📝 3.Open the project in your preferred code editor.
 
 <br>
 
-## Submission
+## Running Tests 🧪
 
-1. Upon completion, run the following commands:
+This project includes unit tests for each of the aforementioned functions. You can run the tests using a JavaScript testing environment like Jest.
 
-```bash
-$ git add .
-$ git commit -m "Sprint Solution"
-$ git push origin master
-```
-
-2. Create Pull Request.
-
-3. Upload the link to the virtual campus so that your mentor can correct it and give you feedback.
-
-
-
-<br>
-
-## Introduction
-
-The statement of the exercise is available on the virtual campus.
-
-<br>
-
-## Tests!
-
+To execute the tests, make sure you have Jest installed and then run the following command:
 
 ```shell
 $ npm install
@@ -62,25 +33,38 @@ $ npm run test:watch
 
 And last, open the generated `test-results.html` file with the "Live Server" VSCode extension to see test results.
 
-Apart from the statement, you will know exactly what you are asked to do by looking at the file `tests/films.spec.js`, all tests are already defined here!
-
 <br>
 
-## Instructions
+## Available Functions 🛠️
 
-You have the following indications from the frontend responsible:
+### 1. `getAllDirectors(array)`
 
-- It is mandatory to implement all loops in ES6 (using map, reduce, filter and sort to manipulate arrays).
+This function returns an array containing all the directors from the provided movies.
 
-- As at the moment we don't consume data from a server using an API, we will work with data from the src/data.js archive. For the moment we will implement the logic using
-an array of information about 250 movies.
+### 2. `getMoviesFromDirector(array, director)`
 
-- The implementation is about processing this array of movies, to display it as requested in each exercise.
+Returns an array with all the movies directed by a specific director.
 
-- The logic to implement will be placed in the src/films.js file.
+### 3. `moviesAverageOfDirector(array, director)`
 
-- You don't need to show the result of each function on the screen. Your goal is to pass the tests.  More information on how to program oriented to pass tests at the end of the document.
+Calculates the average score of movies directed by a given director.
 
-- Don't forget to include the capture of the test results in the virtual campus.
+### 4. `orderAlphabetically(array)`
 
+Alphabetically sorts movies by title and returns the top 20 titles in an array.
 
+### 5. `orderByYear(array)`
+
+Sorts movies by release year, in ascending order, and then alphabetically by title if they have the same release year.
+
+### 6. `moviesAverageByCategory(movies, genre)`
+
+Calculates the average score of movies in a specific genre.
+
+### 7. `hoursToMinutes(array)`
+
+Converts the duration of movies from hours and minutes to minutes.
+
+### 8. `bestFilmOfYear(movies, year)`
+
+Returns the best movie of a specific year.
